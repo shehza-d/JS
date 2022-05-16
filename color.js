@@ -28,3 +28,12 @@ s = s + (24 + 3)  ;
 console.log("s is equal to: ", s);
 
 let billAmount
+
+
+let one = "something";
+let two = "something else";
+
+document.write(`${one} ${two}`);
+document.write(`${1+2+3}  <br/>`);
+document.write(`1+2+3`);
+
