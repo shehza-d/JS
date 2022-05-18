@@ -13,14 +13,14 @@
 
 	<script>
 
-		let num1 = prompt("Enter a number:");
-		let num2 = prompt("Enter another number:");
+		let num1 = parseInt(prompt("Enter a number:"));
+		let num2 = parseInt(prompt("Enter another number:"));
 
 		let sum = num1 + num2;
 		let minus = num1 - num2;
 		let multiply = num1 * num2;
 		let divide = num1 / num2;
-		let modulus = num1 + num2;
+		let modulus = num1 % num2;
 
 		document.write("The Sum of " + num1 + " and " + num2 + " is " + sum + "<br>");
 		document.write("The Subtraction of " + num1 + " and " + num2 + " is " + minus + "<br>");
@@ -29,7 +29,7 @@
 		document.write("The Modulus of " + num1 + " and " + num2 + " is " + modulus + "<br><br><br>");
 
 
-		let randomVariable = prompt("Initialize the variable:");
+		let randomVariable = parseInt(prompt("Initialize the variable:"));
 		let s7 = randomVariable + 7;
 
 		document.write("Value after variable declaration is: "+randomVariable +"<br>");
