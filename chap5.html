@@ -32,15 +32,19 @@
 		let randomVariable = parseInt(prompt("Initialize the variable:"));
 		let s7 = randomVariable + 7;
 
-		document.write("Value after variable declaration is: "+randomVariable +"<br>");
+		document.write("Value after variable declaration is: " + randomVariable + "<br>");
 
-		document.write("Value after increment is : "+ ++randomVariable +"<br>");
+		document.write("Value after increment is : " + ++randomVariable + "<br>");
 		randomVariable--;
-		document.write("Value after decrement is : "+ --randomVariable +"<br>");
+		document.write("Value after decrement is : " + --randomVariable + "<br>");
+		randomVariable++;
 
-		document.write("After adding 7 value is : "+ s7 + "<br>")
-		document.write("After adding 7 value and decrementing : "+ --s7 + "<br>")
 
+		document.write("After adding 7 value is : " + s7 + "<br>")
+		document.write("After adding 7 value and decrementing : " + --s7 + "<br>")
+
+		let e3 = randomVariable % 3;
+		document.write("Remainder after dividing the variable’s value by 3 : " + e3 + "<br>")
 	</script>
 </body>
 
