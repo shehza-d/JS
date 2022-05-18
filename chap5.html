@@ -16,7 +16,7 @@
 		let num1 = parseInt(prompt("Enter a number:"));
 		let num2 = parseInt(prompt("Enter another number:"));
 
-		let sum = num1 + num2;
+		let sum = number(num1) + number(num2);
 		let minus = num1 - num2;
 		let multiply = num1 * num2;
 		let divide = num1 / num2;
@@ -45,7 +45,17 @@
 
 		let e3 = randomVariable % 3;
 		document.write("Remainder after dividing the variable’s value by 3 : " + e3 + "<br>")
+
+
+		let ticket = 4;
+		let ticktetPrice = ticket * 600;
+		document.write("The total amount to buy "+ ticket + " tickets to a movie is "+ ticktetPrice+"PKR.")
+	
 	</script>
+
+<input type="number" id="ageID">
+<button onclick="">Submit</button>
+
 </body>
 
 </html>
