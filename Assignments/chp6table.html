@@ -46,26 +46,37 @@
 
     <script>
         let sub1 = prompt("Enter Subject 1 :");
-        let mark1 = prompt("Enter "+sub1+"  Marks");
+        let mark1 = Number(prompt("Enter "+sub1+"  Marks"));
 
         let sub2 = prompt("Enter Subject 2 :");
-        let mark2 = prompt("Enter "+sub2+" Marks");
+        let mark2 = Number(prompt("Enter "+sub2+" Marks"));
 
         let sub3 = prompt("Enter Subject 3 :");
-        let mark3 = prompt("Enter "+sub3+" Marks");
+        let mark3 = Number(prompt("Enter "+sub3+" Marks"));
 
-        let mark_percentage1 =Mark1/100*100;
-        let mark_percentage2 =Mark2/100*100;
-        let mark_percentage3 =Mark3/100*100;
+        let mark_percentage1 =mark1/100*100;
+        let mark_percentage2 =mark2/100*100;
+        let mark_percentage3 =mark3/100*100;
 
         let totalmark = mark1+mark2+mark3;
-        let totalpercentage= mark_percentage1+mark_percentage2+mark_percentage3;
+        let totalpercentage= totalmark/300*100;
 
-    // document.getElementById("sub1").soeme
 
-// let result = 43;
 
-document.getElementById("sub1").innerHTML = "Hello World";
+        console.log("Marks 1 : " + mark1);
+        console.log("Marks 2 : " + mark2);
+        console.log("Marks 3 : " + mark3);
+
+        console.log("Marks 1 in percentage " + mark_percentage1);
+        console.log("Marks 2 in percentage " + mark_percentage2);
+        console.log("Marks 3 in percentage " + mark_percentage3);
+
+        console.log("Total mark : " + totalmark);
+        console.log("total percentage :" + totalpercentage)
+//     // document.getElementById("sub1").soeme
+// // let result = 43;
+
+// document.getElementById("sub1").innerHTML = "Hello World";
 
     // let sumResultElement = document.querySelector("#sub1");
     //         sumResultElement.innerText = 'result';
