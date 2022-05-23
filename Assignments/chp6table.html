@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chp6 table</title>
+</head>
+<body>
+    <h1>Result Card</h1>
+
+    <table border="3px">
+        <tr>
+            <th>Subject</th>
+            <th>Total Marks</th>
+            <th>Obtain Marks</th>
+            <th>Percentage</th>
+        </tr>
+        <tr>
+            <td id="sub1"></td>
+            <td>100</td>
+            <td id="mark1"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td id="sub2"></td>
+            <td>100</td>
+            <td id="mark2"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td id="sub3"></td>
+            <td>100</td>
+            <td id="mark3"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Total</td>
+            <td>300</td>
+            <td id="totalmark"></td>
+            <td id="totalpercentage"></td>
+        </tr>
+
+    </table>
+
+
+    <script>
+        let sub1 = prompt("Enter Subject 1 :");
+        let mark1 = prompt("Enter "+sub1+"  Marks");
+
+        let sub2 = prompt("Enter Subject 2 :");
+        let mark2 = prompt("Enter "+sub2+" Marks");
+
+        let sub3 = prompt("Enter Subject 3 :");
+        let mark3 = prompt("Enter "+sub3+" Marks");
+
+        let mark_percentage1 =Mark1/100*100;
+        let mark_percentage2 =Mark2/100*100;
+        let mark_percentage3 =Mark3/100*100;
+
+        let totalmark = mark1+mark2+mark3;
+        let totalpercentage= mark_percentage1+mark_percentage2+mark_percentage3;
+
+    // document.getElementById("sub1").soeme
+
+// let result = 43;
+
+document.getElementById("sub1").innerHTML = "Hello World";
+
+    // let sumResultElement = document.querySelector("#sub1");
+    //         sumResultElement.innerText = 'result';
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
