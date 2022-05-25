@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grading Advance</title>
+  </head>
+  <body>
+    <h2>Percentage Calculator</h2>
+    <form onsubmit="funshun(); return false">
+      What was total Marks<input type="number" min="1" id="input_total_marks" /><br />
+      What was Obtain Marks<input type="number" min="0" id="input_obtain_marks" />
+      <button type="submit">Check</button>
+    </form>
+    <p id="error_msg_ID"></p>
+    <h2>Percentage is :</h2>
+    <h2 id="percentage_ID"></h2>
+    <script>
+      function funshun() {
+        let total_marks = Number(
+          document.querySelector("#input_total_marks").value
+        );
+        let obtain_marks = Number(
+          document.querySelector("#input_obtain_marks").value
+        );
+
+        //Valadtion
+        let error_msg ="";
+        if (isNaN(total_marks)){
+            error_msg="Please enter a number!"
+        }
+        // if (isNaN(total_marks)){
+        //     error_msg=""
+        // }
+        if (total_marks<obtain_marks){
+            error_msg="Total Marks can't be greater then Obtain Marks!"
+        }
+        // if (isNaN(total_marks)){
+        //     error_msg=""
+        // }
+        if (error_msg){
+
+        }else {
+
+        }
+        let calculated_Percentage = (obtain_marks / total_marks) * 100;
+        console.log(calculated_Percentage);
+        
+        // let tempr
+        // if (calculated_Percentage >= 80 && calculated_Percentage =< 101) {
+            
+
+        // //   document.write("You haved passed in A+ Grade.❤");
+        // } else if (calculated_Percentage >= 70 && calculated_Percentage < 80) {
+        //   document.write("You haved passed in A Grade.");
+        // } else if (calculated_Percentage >= 60 && calculated_Percentage < 70) {
+        //   document.write("You haved passed in B Grade.");
+        // } else if (marks >= 50 && calculated_Percentage < 60) {
+        //   document.write("You haved passed in C Grade.");
+        // } else if (calculated_Percentage >= 40 && calculated_Percentage < 50) {
+        //   document.write("You haved passed in D Grade.");
+        // } else if (calculated_Percentage >= 0 && calculated_Percentage < 40) {
+        //   document.write("You have FAILED SORRY.");
+        // } else {
+        //   document.write("ERROR hy koi");
+        }
+      }
+    </script>
+  </body>
+</html>
