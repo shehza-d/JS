@@ -11,8 +11,14 @@
 <body>
 	<h1>Assignment chapter 5</h1>
 
-	<script>
+	<button onclick="question1()">Question 01 and 2</button><br>
+	<button onclick="question3()">Question 03</button><br>
+	<button onclick="question4()">Question 04 Movie Ticket</button><br>
+	<button onclick="question6()">Question 06 tempreature</button><br>
+	<button onclick="question7()">Question 07 Shoping Slip</button><br><br>
 
+	<script>
+function question1() {
 		let num1 = parseInt(prompt("Enter a number:"));
 		let num2 = parseInt(prompt("Enter another number:"));
 
@@ -27,8 +33,8 @@
 		document.write("The Multiplication of " + num1 + " and " + num2 + " is " + multiply + "<br>");
 		document.write("The Division of " + num1 + " and " + num2 + " is " + divide + "<br>");
 		document.write("The Modulus of " + num1 + " and " + num2 + " is " + modulus + "<br><br><br>");
-
-
+}
+function question3() {
 		let randomVariable = parseInt(prompt("Initialize the variable:"));
 		let s7 = randomVariable + 7;
 
@@ -45,24 +51,38 @@
 
 		let e3 = randomVariable % 3;
 		document.write("Remainder after dividing the variable’s value by 3 : " + e3 + "<br>")
-
-
-		//chapter 5 question 4
+}
+//chapter 5 question 4
+function question4() {
 		let ticket = prompt("How may Movie tickets you want to buy :");
 		let ticktetPrice = ticket * 600;
 		document.write("<br><br><br>The total amount to buy " + ticket + " tickets to a movie is " + ticktetPrice + "PKR.")
+}
 
-		//question 6
-		let celsius = prompt("Enter tempreature in Celsius");
+function question6() { 
+	let celsiusTemp = prompt(`Please enter Temperature in Celsius`);
+            let f = (celsiusTemp * 9 / 5) +32; let nf = f.toFixed(2);
+            let fahrenTemp = prompt(`Please enter Temperature in Fahrenheit`);
+            let c = (fahrenTemp -32) * 5 / 9; let nc = c.toFixed(2);
+            document.write(`${celsiusTemp}°Celsius is ${f}°Fahrenheit<br>`);
+            document.write(`${fahrenTemp}°Fahrenheit is ${nc}°Celsius<br><br><a href="./chapter5-6.html"><button>Back</button></a>`);
+        }
+		// let celsius = prompt("Enter tempreature in Celsius");
 		// let fahrenheit =5;
 		// Result_celsius = (fahrenheit - 32) * 5/9;
-		let result_celsius = celsius*1.8;
+		// let result_celsius = celsius*1.8;
 		// fahrenheit = (Result_celsius - 32) * 5/9;
+		// document.write("<br><br>Question 6 <br>If " + celsius + "°C is converted into  fahrenheit it is equal to "+ result_celsius);
+		// document.write("<br><br>Question 6 <br>If " + fahrenheit + "°F is converted into  celsius it is equal to "+ Result_celsius);}
 
-		document.write("<br><br>Question 6 <br>If " + celsius + "°C is converted into  fahrenheit it is equal to "+ result_celsius);
-		// document.write("<br><br>Question 6 <br>If " + fahrenheit + "°F is converted into  celsius it is equal to "+ Result_celsius);
-		
+
 		//question 7
+		function question7(){
+			let price1 = Number(prompt("Enter 1st item's Price"));
+			let quantity1 = Number(prompt("Enter 1st item's Quantity"));
+			let price2 = Number(prompt("Enter 2nd item's Price"));
+			let quantity2 = Number(prompt("Enter 2nd item's Quantity"));
+		}
 
 
 
