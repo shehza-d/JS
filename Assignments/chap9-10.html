@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/x-icon" href="../Shehzad-logo.png" />
+	<title>chap 9 to 10</title>
+	<style>
+		#traffic_div {
+			color: rgb(23, 23, 23);
+			width: 80%;
+			height: 50px;
+			text-align: center;
+			padding: 7px;
+			padding-top: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<h2>Assignment chapter 9 to 10</h2>
+
+	<h2>Question 1</h2>
+	<form onsubmit="question1(); return false" id="city_form">
+		<input type="text" id="question1" placeholder="City...">
+		<!-- <input type="submit" value="submit"> -->
+		<button type="submit">Check</button><br>
+	</form><br>
+
+	<h2>Question 2</h2>
+	<form onsubmit="question2(); return false" id="q2">
+
+		<input type="radio" name="gender" value="male">
+		<label for="gender1">Male</label>
+
+		<input type="radio" name="gender" value="female">
+		<label for="gender2">Female</label>
+
+		<button type="submit">Check</button><br>
+	</form><br>
+
+
+	<h2>Question3</h2>
+	<form onsubmit="question3(); return false">
+		<label for="traffic_signs">Chose your Value: </label>
+		<select name="" id="traffic_signs">
+			<option value="red">Red</option>
+			<option value="yellow">Yellow</option>
+			<option value="green">Green</option>
+		</select>
+
+		<button type="submit">Check</button>
+	</form>
+	<div id="traffic_div"></div>
+
+
+
+
+
+	<br><br>
+	<form onclick="question4(); return false" id="petrol">
+		<input type="number" min="0" max="9999">
+		<button type="submit">Check</button><br>
+	</form>
+	<!-- <button onclick="question6()">Question 06 tempreature</button><br> -->
+	<!-- <button onclick="question7()">Question 07 Shoping Slip</button><br><br>
+	 -->
+
+
+
+
+
+
+
+
+
+
+	<script>
+		function question1() {
+			document.getElementById("city_form").addEventListener("submit", (e) => {
+				e.preventDefault()
+				let city = document.querySelector("#question1").value
+				console.log(city);
+			})
+
+			// let input_city = document.querySelector("#question1").value;
+
+		}
+		function question2() {
+			document.getElementById("q2").addEventListener("submit", (e) => {
+				e.preventDefault()
+				let radio = document.getElementsByName('gender')
+				if (radio[0].checked) {
+					alert("hello sir")
+				}
+				else if (radio[1].checked) {
+					alert("hello madam")
+				}
+				else {
+					alert("select one")
+				}
+			})
+		}
+
+		function question3() {
+			let traffic_signs_value = document.querySelector("#traffic_signs").value;
+			// console.log(traffic_signs_value);
+			if (traffic_signs_value == "red") {
+				document.querySelector("#traffic_div").textContent = "Must Stop!";
+				document.querySelector("#traffic_div").style.backgroundColor = "red";
+				// alert("Must Stop!");
+			} else if (traffic_signs_value == "yellow") {
+				document.querySelector("#traffic_div").textContent = "Ready to Move";
+				document.querySelector("#traffic_div").style.backgroundColor = "yellow";
+				// alert("Ready to Move!")
+			} else if (traffic_signs_value == "green") {
+				document.querySelector("#traffic_div").textContent = "Move now";
+				document.querySelector("#traffic_div").style.backgroundColor = "green";
+				// alert("Move Now!")
+			} else {
+				alert("Error!")
+			}
+		}
+
+		function question4() {
+			let fuel = document.querySelector("#petrol").value;
+			console.log(fuel);
+			// let fuel = Number(prompt("Enter fuel in litres: "));
+			// if (fuel < 0) {
+			// 	alert("minus ma kon petrol daalwata hy");
+			// }
+			// if (fuel <= 0.25) {
+			// 	alert("Please refill the fuel in your car!");
+			// }
+			// else {
+			// 	alert("You have enough!");
+			// }
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="traffic_div"></div>
+	<script>
+function question3() {
+			let traffic_signs_value = document.querySelector("#traffic_signs").value;
+			if (traffic_signs_value == "red") {
+				document.querySelector("#traffic_div").value = "RED";
+			}
+
+			 else if (traffic_signs_value == "yellow") {
+				document.querySelector("#traffic_div").value = "Yellow";
+			} 
+
+			else if (traffic_signs_value == "green") {
+				document.querySelector("#traffic_div").value = "Green";
+			}
+
+			 else {
+				alert("Error!")
+			}
+		}
+
+
+	</script>
+</body>
+</html>
