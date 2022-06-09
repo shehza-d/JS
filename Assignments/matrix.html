@@ -8,25 +8,30 @@
 	<link rel="shortcut icon" type="image/x-icon" href="../Shehzad-logo.png" />
 	<title>Matrix Addition</title>
 	<style>
+		body{
+			background-color: rgb(121, 244, 73);
+		}
 		#input_1 {
 			border: 4px solid green;
 		}
-
 		#input_1>tr>td {
 			margin: 7px;
 		}
-
 		#input_2 {
 			border: 4px solid green;
 		}
-
 		.two_table_container {
 			display: flex;
 			justify-content: space-around;
 		}
-
 		#result_table {
 			border: 7px solid red;
+		}
+		button{
+			margin: auto;
+			display: flex;
+			justify-content: center;
+			width: 30%;
 		}
 	</style>
 </head>
@@ -69,6 +74,7 @@
 				<td id="td_17"></td>
 				<td id="td_18"></td>
 			</tr>
+	</table>
 	</div>
 	<table id="result_table">
 		<tr>
@@ -98,12 +104,12 @@
 					matrix_inputS_array[i][j] = prompt("Enter a number for 1st Array");
 				}
 			}
-//we will add first matrix array to this 2nd matrix array
+			//we will add first matrix array to this 2nd matrix array
 			let matrix_inputS_array2 = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
 			for (let i = 0; i < 3; i++) {
 				for (let j = 0; j < 3; j++) {
 					matrix_inputS_array2[i][j] = prompt("Enter a number for 2nd Array");
-					result_table[i][j] = 
+					// result_table[i][j] = 
 				}
 			}
 
