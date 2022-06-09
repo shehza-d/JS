@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 </head>
+
 <body>
 	<p>Question 1</p>
-	<form onsubmit="question1(); return false">
+	<form onsubmit="question01(); return false">
 		<input type="text" id="question1" placeholder="City...">
-		<button type="submit" >Check</button><br>
+		<button type="submit">Check</button><br>
 	</form><br>
-<script>
-	function question1() {
-		let input_city = document.querySelector("#question1").value;
-		console.log(input_city);
+	<script>
+		function question01() {
+			let input_city = document.querySelector("#question1").value;
+
+			if (input_city = "karachi") {
+				alert("Welcome to the City of Lights!");
+			} else {
+				alert("Welcome to "+ input_city)
+			}
+
 		}
-</script>
-	
+	</script>
+
 </body>
+
 </html>
