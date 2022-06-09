@@ -127,14 +127,14 @@
 			let result_table = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
 			for (let i = 0; i < 3; i++) {
 				for (let j = 0; j < 3; j++) {
-					matrix_inputS_array[i][j] = Number(prompt(`Enter a number for Row ${i+1} Column ${j+1} 1st Array`));
+					matrix_inputS_array[i][j] = Number(prompt(`Enter a number for Row ${i+1} Column ${j+1} in 1st Array`));
 				}
 			}
 			//we will add first matrix array to this 2nd matrix array
 			let matrix_inputS_array2 = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
 			for (let i = 0; i < 3; i++) {
 				for (let j = 0; j < 3; j++) {
-					matrix_inputS_array2[i][j] = Number(prompt(`Enter a number for Row ${i+1} Column ${j+1} 1st Array`));
+					matrix_inputS_array2[i][j] = Number(prompt(`Enter a number for Row ${i+1} Column ${j+1} in 2nd Array`));
 					result_table[i][j] = matrix_inputS_array[i][j] + matrix_inputS_array2[i][j];
 				}
 			}
