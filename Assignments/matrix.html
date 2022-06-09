@@ -8,26 +8,40 @@
 	<link rel="shortcut icon" type="image/x-icon" href="../Shehzad-logo.png" />
 	<title>Matrix Addition</title>
 	<style>
-		body{
+		body {
 			background-color: rgb(121, 244, 73);
 		}
+
+		h1 {
+			text-align: center;
+		}
+
 		#input_1 {
 			border: 4px solid green;
 		}
+
 		#input_1>tr>td {
 			margin: 7px;
 		}
+
 		#input_2 {
 			border: 4px solid green;
 		}
+
 		.two_table_container {
 			display: flex;
 			justify-content: space-around;
 		}
+
 		#result_table {
+			display: flex;
+			justify-content: center;
+			width: 40%;
+			margin: auto;
 			border: 7px solid red;
 		}
-		button{
+
+		button {
 			margin: auto;
 			display: flex;
 			justify-content: center;
@@ -39,7 +53,7 @@
 <body>
 	<h1>Matrix Addition</h1>
 
-	<button onclick="start()">START</button>
+	<button onclick="start()">START</button><br><br>
 	<div class="two_table_container">
 		<table id="input_1">
 			<tr>
@@ -74,8 +88,8 @@
 				<td id="td_17"></td>
 				<td id="td_18"></td>
 			</tr>
-	</table>
-	</div>
+		</table>
+	</div><br><br>
 	<table id="result_table">
 		<tr>
 			<td id="td_19"></td>
@@ -101,15 +115,15 @@
 			let result_table = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
 			for (let i = 0; i < 3; i++) {
 				for (let j = 0; j < 3; j++) {
-					matrix_inputS_array[i][j] = prompt("Enter a number for 1st Array");
+					matrix_inputS_array[i][j] = Number(prompt("Enter a number for 1st Array"));
 				}
 			}
 			//we will add first matrix array to this 2nd matrix array
 			let matrix_inputS_array2 = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
 			for (let i = 0; i < 3; i++) {
 				for (let j = 0; j < 3; j++) {
-					matrix_inputS_array2[i][j] = prompt("Enter a number for 2nd Array");
-					// result_table[i][j] = 
+					matrix_inputS_array2[i][j] = Number(prompt("Enter a number for 2nd Array"));
+					result_table[i][j] = matrix_inputS_array[i][j] + matrix_inputS_array2[i][j];
 				}
 			}
 
@@ -142,11 +156,8 @@
 			document.querySelector("#td_25").innerHTML = result_table[2][0];
 			document.querySelector("#td_26").innerHTML = result_table[2][1];
 			document.querySelector("#td_27").innerHTML = result_table[2][2];
-
-
 		}
 	</script>
 </body>
-
 
 </html>
