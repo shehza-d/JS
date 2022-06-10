@@ -78,6 +78,10 @@
             display: flex;
             justify-content: space-around;
         }
+        .form2 {
+            display: flex;
+            justify-content: space-around;
+        }
 
         /* https://colorhunt.co/palette/242f9b646fd49ba3ebdbdffd */
     </style>
@@ -96,12 +100,11 @@
     </form>
     <br><br><BR></BR>
     <div class="container_div">
-        <form onclick="sum()">
+        <!-- <form onclick="sum()" class="form2"></form> -->
             <div id="value_input_div1"></div>
             <div id="value_input_div2"></div>
-            <button class="button_2" >SUM</button><br><br>
-        </form>
-
+            <button  type="submit" >SUM</button><br><br>
+        
         <div id="result_div"></div>
     </div>
     <br><br><BR></BR>
@@ -136,7 +139,7 @@
             for (let i = 0; i < size1; i++) {
                 for (let j = 0; j < size2; j++) {
                     var target = document.querySelector("#value_input_div1");
-                    target.innerHTML += `<input class="input_boxes" size="1" id="matrix_size_${i+1}">`;
+                    target.innerHTML += `<input class="input_boxes" size="1" id="matrix_size_${i-j}" placeholder="0">`;
                     console.log(i+1)
                 }
                 target.innerHTML += "<br>";
@@ -144,7 +147,7 @@
             for (let i = 0; i < size1; i++) {
                 for (let j = 0; j < size2; j++) {
                  target = document.querySelector("#value_input_div2");
-                    target.innerHTML += `<input class="input_boxes" size="1" id="matrix_size_${i+1}">`;
+                    target.innerHTML += `<input class="input_boxes" size="1" id="matrix_size_${i-j}" placeholder="0">`;
                     console.log(i+1)
                 }
                 target.innerHTML += "<br>";
