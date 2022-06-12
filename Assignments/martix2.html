@@ -116,6 +116,7 @@
 	
 
     <script>
+        let target_result_div = "";
         function start() {
             let row = Number(document.querySelector("#matrix_row_size").value);
             let column = Number(document.querySelector("#matrix_column_size").value);
@@ -141,7 +142,7 @@
             let row = Number(document.querySelector("#matrix_row_size").value);
             let column = Number(document.querySelector("#matrix_column_size").value);
 
-            var target_result_div = document.querySelector("#result_div");
+             target_result_div = document.querySelector("#result_div");
 
             for (let i = 0; i < row; i++) {
                 for (let j = 0; j < column; j++) {
