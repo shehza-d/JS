@@ -116,7 +116,6 @@
 	
 
     <script>
-        let target_result_div = "";
         function start() {
             let row = Number(document.querySelector("#matrix_row_size").value);
             let column = Number(document.querySelector("#matrix_column_size").value);
@@ -141,15 +140,15 @@
         function sum() {
             let row = Number(document.querySelector("#matrix_row_size").value);
             let column = Number(document.querySelector("#matrix_column_size").value);
-
-             target_result_div = document.querySelector("#result_div");
-
+            
+            let target_result_div = "";
+            target_result_div = document.querySelector("#result_div");
+            // target_result_div.remove();
             for (let i = 0; i < row; i++) {
                 for (let j = 0; j < column; j++) {
                     let value1 = Number(document.querySelector(`#matrix_value_${i}${j}`).value);
                     let value2 = Number(document.querySelector(`#matrix_value2_${i}${j}`).value);
                     let result = value1 + value2;
-                    // let result = 4;
 
                     console.log(result);
 
