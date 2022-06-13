@@ -81,7 +81,7 @@
     </form>
     <br><br><BR></BR>
     <form onsubmit="sum(); return false" class="form2">
-        <div id="value_input_div1"></div>
+        <div id="value_input_div1"></div>+
         <div id="value_input_div2"></div>
         <button type="submit">SUM</button><br><br>
     </form>
@@ -94,14 +94,19 @@
     <script>
         let row = "";
         let column = "";
+        let target_result_div = document.querySelector("#result_div");
+        target_result_div.innerHTML = "";
+        // target_result_div.innerHTML = '';
+
 
         function start() {
             row = Number(document.querySelector("#matrix_row_size").value);
             column = Number(document.querySelector("#matrix_column_size").value);
 
             let target1 = document.querySelector("#value_input_div1");
+            target1.innerHTML = "";
             let target2 = document.querySelector("#value_input_div2");
-
+            target2.innerHTML = "";
 
             if (row == "" || column == "") {
                 alert("Please enter values");
@@ -116,28 +121,29 @@
                 return;
             }
 
-            //     // target.innerHTML= "";
             for (let i = 0; i < row; i++) {
                 for (let j = 0; j < column; j++) {
-                    target1.innerHTML += `<input type="number" class="input_boxes" size="1" id="matrix_value_${i}${j}" value="0" style="width: 30px;" >`;
-                    target2.innerHTML += `<input type="number" class="input_boxes" size="1" id="matrix_value2_${i}${j}" value="0" style="width: 30px;" >`;
+                    target1.innerHTML += `<input type="number" class="input_boxes" id="matrix_value_${i}${j}" value="0" style="width: 30px;" >`;
+                    target2.innerHTML += `<input type="number" class="input_boxes" id="matrix_value2_${i}${j}" value="0" style="width: 30px;" >`;
+                    target_result_div.innerHTML += `<input type="number" disabled required  id="mResult-${i}${j}" value="0" style="width: 30px;">`;
                 }
                 target1.innerHTML += "<br>";
                 target2.innerHTML += "<br>";
+                target_result_div.innerHTML += "<br>";
             }
+
         }
         function sum() {
-            let target_result_div = document.querySelector("#result_div");
-            target_result_div.innerHTML = ''
+            target_result_div.innerHTML = '';
 
             for (let i = 0; i < row; i++) {
                 for (let j = 0; j < column; j++) {
                     let value1 = Number(document.querySelector(`#matrix_value_${i}${j}`).value);
                     let value2 = Number(document.querySelector(`#matrix_value2_${i}${j}`).value);
                     let result = value1 + value2;
-                    target_result_div.innerHTML += `<span>${result}</span>`;
+                    // target_result_div.innerHTML += `<span>${result}</span>`;
                 }
-                target_result_div.innerHTML += "<br>";
+                // target_result_div.innerHTML += "<br>";
             }
         }
     </script>
