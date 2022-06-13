@@ -116,12 +116,35 @@
 	
 
     <script>
+        let row = "";
+let column = "";
+
+    //    let  value1.innerHTML = "";
+    // let value2.innerHTML = "";
+    // let result.innerHTML = "";
+
         function start() {
-            let row = Number(document.querySelector("#matrix_row_size").value);
-            let column = Number(document.querySelector("#matrix_column_size").value);
+             row = Number(document.querySelector("#matrix_row_size").value);
+             column = Number(document.querySelector("#matrix_column_size").value);
 
             var target1 = document.querySelector("#value_input_div1");
             var target2 = document.querySelector("#value_input_div2");
+
+
+            if (row == "" || column == "") {
+        alert("Please enter values");
+        return;
+    }
+    if (row != column) {
+        alert("Please enter same number  of rows and columns");
+        return;
+    }
+    if (row < 2 || column < 2) {
+        alert("Please enter number greater than 1");
+        return;
+    }
+
+
 
             // target.innerHTML=""
             for (let i = 0; i < row; i++) {
@@ -143,12 +166,11 @@
             
             let target_result_div = "";
             target_result_div = document.querySelector("#result_div");
-            // target_result_div.remove();
             for (let i = 0; i < row; i++) {
                 for (let j = 0; j < column; j++) {
-                    let value1 = Number(document.querySelector(`#matrix_value_${i}${j}`).value);
-                    let value2 = Number(document.querySelector(`#matrix_value2_${i}${j}`).value);
-                    let result = value1 + value2;
+              let   value1 = Number(document.querySelector(`#matrix_value_${i}${j}`).value);
+               let  value2 = Number(document.querySelector(`#matrix_value2_${i}${j}`).value);
+                 let result = value1 + value2;
 
                     console.log(result);
 
