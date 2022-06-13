@@ -28,26 +28,6 @@
             border: 4px solid rgb(211, 231, 28);
         }
 
-        /* .input_boxes {
-            margin: 7px;
-        } */
-        /* 
-        #input_2 {
-            border: 4px solid green;
-        } */
-
-        /* .two_table_container {
-            display: flex;
-            justify-content: space-around;
-        } */
-
-        /* #result_table {
-            display: flex;
-            justify-content: center;
-            width: 40%;
-            margin: auto;
-            border: 7px solid #242F9B;
-        } */
         .button_2 {
             color: #DBDFFD;
             background-color: #242F9B;
@@ -88,10 +68,11 @@
         /* https://colorhunt.co/palette/242f9b646fd49ba3ebdbdffd */
     </style>
 </head>
+
 <body>
     <h1>Matrix Addition</h1>
     <p>Enter matrix table size</p>
-    <form class="form1" onclick="start(); return false">
+    <form class="form1" onsubmit="start(); return false">
         <label for="">Rows: </label>
         <input type="number" id="matrix_row_size" required>
         <label for="">Column: </label>
@@ -99,81 +80,61 @@
         <button type="submit">Start</button>
     </form>
     <br><br><BR></BR>
-    <!-- <div class="container_div"> -->
-    <form onclick="sum(); return false" class="form2">
+    <form onsubmit="sum(); return false" class="form2">
         <div id="value_input_div1"></div>
         <div id="value_input_div2"></div>
         <button type="submit">SUM</button><br><br>
     </form>
-    
+
     <br><br>
     <!-- <table id="result_div"></table> -->
     <div id="result_div"></div>
-    <!-- </div> -->
     <br><br><BR></BR>
-
-
-	
 
     <script>
         let row = "";
-let column = "";
-
-    //    let  value1.innerHTML = "";
-    // let value2.innerHTML = "";
-    // let result.innerHTML = "";
+        let column = "";
 
         function start() {
-             row = Number(document.querySelector("#matrix_row_size").value);
-             column = Number(document.querySelector("#matrix_column_size").value);
+            row = Number(document.querySelector("#matrix_row_size").value);
+            column = Number(document.querySelector("#matrix_column_size").value);
 
-            var target1 = document.querySelector("#value_input_div1");
-            var target2 = document.querySelector("#value_input_div2");
+            let target1 = document.querySelector("#value_input_div1");
+            let target2 = document.querySelector("#value_input_div2");
 
 
             if (row == "" || column == "") {
-        alert("Please enter values");
-        return;
-    }
-    if (row != column) {
-        alert("Please enter same number  of rows and columns");
-        return;
-    }
-    if (row < 2 || column < 2) {
-        alert("Please enter number greater than 1");
-        return;
-    }
+                alert("Please enter values");
+                return;
+            }
+            if (row != column) {
+                alert("Please enter same number  of rows and columns");
+                return;
+            }
+            if (row < 2 || column < 2) {
+                alert("Please enter number greater than 1");
+                return;
+            }
 
-
-
-            // target.innerHTML=""
+            //     // target.innerHTML= "";
             for (let i = 0; i < row; i++) {
                 for (let j = 0; j < column; j++) {
                     target1.innerHTML += `<input type="number" class="input_boxes" size="1" id="matrix_value_${i}${j}" value="0" style="width: 30px;" >`;
-                }
-                target1.innerHTML += "<br>";
-            }
-            for (let i = 0; i < row; i++) {
-                for (let j = 0; j < column; j++) {
                     target2.innerHTML += `<input type="number" class="input_boxes" size="1" id="matrix_value2_${i}${j}" value="0" style="width: 30px;" >`;
                 }
+                target1.innerHTML += "<br>";
                 target2.innerHTML += "<br>";
             }
         }
         function sum() {
-            let row = Number(document.querySelector("#matrix_row_size").value);
-            let column = Number(document.querySelector("#matrix_column_size").value);
-            
-            let target_result_div = "";
-            target_result_div = document.querySelector("#result_div");
+            let target_result_div = document.querySelector("#result_div");
+            target_result_div.innerHTML = ''
+
             for (let i = 0; i < row; i++) {
                 for (let j = 0; j < column; j++) {
-              let   value1 = Number(document.querySelector(`#matrix_value_${i}${j}`).value);
-               let  value2 = Number(document.querySelector(`#matrix_value2_${i}${j}`).value);
-                 let result = value1 + value2;
-
-                    console.log(result);
-
+                    let value1 = Number(document.querySelector(`#matrix_value_${i}${j}`).value);
+                    let value2 = Number(document.querySelector(`#matrix_value2_${i}${j}`).value);
+                    let result = value1 + value2;
                     target_result_div.innerHTML += `<span>${result}</span>`;
                 }
                 target_result_div.innerHTML += "<br>";
