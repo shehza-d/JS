@@ -79,7 +79,7 @@
         <button type="submit">Start</button>
     </form>
     <br><br><BR></BR>
-    <form onsubmit="sum(); return false" class="form2">
+    <form onsubmit="matrix_multiply(); return false" class="form2">
         <div id="value_input_div1"></div>+
         <div id="value_input_div2"></div>
         <button type="submit">SUM</button><br><br>
@@ -93,7 +93,9 @@
         let row = "";
         let column = "";
         let target_result_div = document.querySelector("#result_div");
-        
+		let arr1 = [];
+		let arr2 = [];
+		
         function start() {
             row = Number(document.querySelector("#matrix_row_size").value);
             column = Number(document.querySelector("#matrix_column_size").value);
@@ -118,7 +120,11 @@
             }
 
             for (let i = 0; i < row; i++) {
+				arr1.push([]);
+				arr2.push([]);
                 for (let j = 0; j < column; j++) {
+					arr1[i].push(0);
+					arr2[i].push(0);
                     target1.innerHTML += `<input type="number" class="input_boxes" id="matrix_value_${i}${j}" value="0" style="width: 30px;" >`;
                     target2.innerHTML += `<input type="number" class="input_boxes" id="matrix_value2_${i}${j}" value="0" style="width: 30px;" >`;
                     target_result_div.innerHTML += `<input type="number" disabled required  id="Result_values_${i}${j}" value="0" style="width: 30px;">`;
@@ -126,31 +132,26 @@
                 target1.innerHTML += "<br>";
                 target2.innerHTML += "<br>";
                 target_result_div.innerHTML += "<br>";
-            } }
-
+            }
+			console.log(arr1);
+			console.log(arr2);
+		 }
         function matrix_multiply() {
-			//multiply two matrix
-			let matrix_value_array = [];
-			let matrix_value2_array = [];
-			let result_array = [];
-
-			//github copilot
-			// for (let i = 0; i < row; i++) {
-			// 	for (let j = 0; j < column; j++) {
-			// 		matrix_value_array[i] = document.querySelector(`#matrix_value_${i}${j}`).value;
-			// 		matrix_value2_array[i] = document.querySelector(`#matrix_value2_${i}${j}`).value;
-			// 	}
-			// }
-
-			//sum  
-        //     for (let i = 0; i < row; i++) {
-        //         for (let j = 0; j < column; j++) {
-        //             let value1 = Number(document.querySelector(`#matrix_value_${i}${j}`).value);
-        //             let value2 = Number(document.querySelector(`#matrix_value2_${i}${j}`).value);
-        //             let result = value1 + value2;
-        //             document.querySelector(`#Result_values_${i}${j}`).value = result;
-        //         }
-        //     }
+			function multiply(a, b) {
+  var aNumRows = a.length, aNumCols = a[0].length,
+      bNumRows = b.length, bNumCols = b[0].length,
+      m = new Array(aNumRows);  // initialize array of rows
+  for (var r = 0; r < aNumRows; ++r) {
+    m[r] = new Array(bNumCols); // initialize the current row
+    for (var c = 0; c < bNumCols; ++c) {
+      m[r][c] = 0;             // initialize the current cell
+      for (var i = 0; i < aNumCols; ++i) {
+        m[r][c] += a[r][i] * b[i][c];
+      }
+    }
+  }
+  return m;
+}
         }
     </script>
 </body>
