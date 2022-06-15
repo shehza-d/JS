@@ -64,6 +64,7 @@
             height: 200px;
             border: 4px solid rgb(231, 41, 28);
         }
+
         /* https://colorhunt.co/palette/242f9b646fd49ba3ebdbdffd */
     </style>
 </head>
@@ -93,9 +94,9 @@
         let row = "";
         let column = "";
         let target_result_div = document.querySelector("#result_div");
-		let arr1 = [];
-		let arr2 = [];
-		
+        let a = [];
+        let b = [];
+
         function start() {
             row = Number(document.querySelector("#matrix_row_size").value);
             column = Number(document.querySelector("#matrix_column_size").value);
@@ -120,11 +121,11 @@
             }
 
             for (let i = 0; i < row; i++) {
-				arr1.push([]);
-				arr2.push([]);
+                a.push([]);
+                b.push([]);
                 for (let j = 0; j < column; j++) {
-					arr1[i].push(0);
-					arr2[i].push(0);
+                    a[i].push(0);
+                    b[i].push(0);
                     target1.innerHTML += `<input type="number" class="input_boxes" id="matrix_value_${i}${j}" value="0" style="width: 30px;" >`;
                     target2.innerHTML += `<input type="number" class="input_boxes" id="matrix_value2_${i}${j}" value="0" style="width: 30px;" >`;
                     target_result_div.innerHTML += `<input type="number" disabled required  id="Result_values_${i}${j}" value="0" style="width: 30px;">`;
@@ -133,25 +134,26 @@
                 target2.innerHTML += "<br>";
                 target_result_div.innerHTML += "<br>";
             }
-			console.log(arr1);
-			console.log(arr2);
-		 }
+    
+        }
+
         function matrix_multiply() {
-			function multiply(a, b) {
-  var aNumRows = a.length, aNumCols = a[0].length,
-      bNumRows = b.length, bNumCols = b[0].length,
-      m = new Array(aNumRows);  // initialize array of rows
-  for (var r = 0; r < aNumRows; ++r) {
-    m[r] = new Array(bNumCols); // initialize the current row
-    for (var c = 0; c < bNumCols; ++c) {
-      m[r][c] = 0;             // initialize the current cell
-      for (var i = 0; i < aNumCols; ++i) {
-        m[r][c] += a[r][i] * b[i][c];
-      }
-    }
-  }
-  return m;
-}
+            var aNumRows = a.length
+            var aNumCols = a[0].length
+            var bNumRows = b.length
+            var bNumCols = b[0].length,
+                m = new Array(aNumRows);  // initialize array of rows
+            for (var r = 0; r < aNumRows; ++r) {
+                m[r] = new Array(bNumCols); // initialize the current row
+                for (var c = 0; c < bNumCols; ++c) {
+                    m[r][c] = 0;             // initialize the current cell
+                    for (var i = 0; i < aNumCols; ++i) {
+                        m[r][c] += a[r][i] * b[i][c];
+                    }
+                }
+            }
+            // return m;
+            console.log(m);
         }
     </script>
 </body>
