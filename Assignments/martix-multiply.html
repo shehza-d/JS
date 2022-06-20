@@ -134,38 +134,37 @@
                 target2.innerHTML += "<br>";
                 target_result_div.innerHTML += "<br>";
             }
-    
+
         }
 
         function matrix_multiply() {
-			function multiply(a, b) {
-  var aNumRows = a.length, aNumCols = a[0].length,
-      bNumRows = b.length, bNumCols = b[0].length,
-      m = new Array(aNumRows);  // initialize array of rows
-  for (var r = 0; r < aNumRows; ++r) {
-    m[r] = new Array(bNumCols); // initialize the current row
-    for (var c = 0; c < bNumCols; ++c) {
-      m[r][c] = 0;             // initialize the current cell
-      for (var i = 0; i < aNumCols; ++i) {
-        m[r][c] += a[r][i] * b[i][c];
-      }
-    }
-  }
-  return m;
-}
-            
-//             let result_div = document.querySelector("#result_div");
-//             result_div.innerHTML = "";
-//             let result_matrix = multiply(arr1, arr2);
-//             console.log(result_matrix);
-//             for (let i = 0; i < row; i++) {
-//                 for (let j = 0; j < column; j++) {
-//                     result_div.innerHTML += `<input type="number" disabled required  id="Result_values_${i}${j}" value="${result_matrix[i][j]}" style="width: 30px;">`;
-//                 }
-//                 result_div.innerHTML += "<br>";
-//             }
-//         }
-   
+            function multiply(a, b) {
+                var aNumRows = a.length, aNumCols = a[0].length,
+                    bNumRows = b.length, bNumCols = b[0].length,
+                    m = new Array(aNumRows);  // initialize array of rows
+                for (var r = 0; r < aNumRows; ++r) {
+                    m[r] = new Array(bNumCols); // initialize the current row
+                    for (var c = 0; c < bNumCols; ++c) {
+                        m[r][c] = 0;             // initialize the current cell
+                        for (var i = 0; i < aNumCols; ++i) {
+                            m[r][c] += a[r][i] * b[i][c];
+                        }
+                    }
+                }
+                return m;
+            }
+
+            let result_div = document.querySelector("#result_div");
+            result_div.innerHTML = "";
+            let result_matrix = multiply(arr1, arr2);
+            console.log(result_matrix);
+            for (let i = 0; i < row; i++) {
+                for (let j = 0; j < column; j++) {
+                    result_div.innerHTML += `<input type="number" disabled required  id="Result_values_${i}${j}" value="${result_matrix[i][j]}" style="width: 30px;">`;
+                }
+                result_div.innerHTML += "<br>";
+            }
+
             var aNumRows = a.length
             var aNumCols = a[0].length
             var bNumRows = b.length
@@ -180,8 +179,9 @@
                     }
                 }
             }
-            // return m;
+            return m;
             console.log(m);
+        
         }
     </script>
 </body>
