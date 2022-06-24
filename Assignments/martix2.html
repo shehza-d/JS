@@ -64,6 +64,7 @@
             height: 200px;
             border: 4px solid rgb(231, 41, 28);
         }
+
         /* https://colorhunt.co/palette/242f9b646fd49ba3ebdbdffd */
     </style>
 </head>
@@ -79,7 +80,7 @@
         <button type="submit">Start</button>
     </form>
     <br><br><BR></BR>
-    <form onsubmit="sum(); return false" class="form2">
+    <form onsubmit="values_lane_ka_function(); return false" class="form2">
         <div id="value_input_div1"></div>+
         <div id="value_input_div2"></div>
         <button type="submit">SUM</button><br><br>
@@ -93,7 +94,7 @@
         let row = "";
         let column = "";
         let target_result_div = document.querySelector("#result_div");
-        
+
         function start() {
             row = Number(document.querySelector("#matrix_row_size").value);
             column = Number(document.querySelector("#matrix_column_size").value);
@@ -126,23 +127,48 @@
                 target1.innerHTML += "<br>";
                 target2.innerHTML += "<br>";
                 target_result_div.innerHTML += "<br>";
-            } }
+            }
+        }
 
-        function sum() {
+        function values_lane_ka_function() {
+            let matrix1 = [], matrix2 = [];
+
             for (let i = 0; i < row; i++) {
+                matrix1[i]= [];
+                matrix2[i]= []
                 for (let j = 0; j < column; j++) {
-                    let value1 = Number(document.querySelector(`#matrix_value_${i}${j}`).value);
-                    let value2 = Number(document.querySelector(`#matrix_value2_${i}${j}`).value);
-                  let result = sumsum(value1, value2)
-                    // let result = value1 + value2;
-                    document.querySelector(`#Result_values_${i}${j}`).value = result;
+                    // if (matrix1[i][j] === undefined) {matrix1[i]= []};
+                    // if (matrix2[i][j] === undefined) {matrix2[i]= []};
+                    matrix1[i][j] = Number(document.querySelector(`#matrix_value_${i}${j}`).value);
+                    matrix2[i][j] = Number(document.querySelector(`#matrix_value2_${i}${j}`).value);
+                    // matrix2.push(Number(document.querySelector(`#matrix_value2_${i}${j}`).value));
+                    // matrix1[i][j]=
                 }
             }
         }
-        
-        function sumsum(a , b){
-           return a+b;
-        }
+        //     let result = matrix_sum(matrix1, matrix2)
+
+
+        //     for (let i = 0; i < matrix1.length; i++) {
+        //         for (let j = 0; j < matrix1[i].length; j++) {
+        //             document.querySelector(`#Result_values_${i}${j}`).value = result[i][j];
+        //         }
+        //     }
+        // }
+
+        // function matrix_sum(matrix1, matrix2) {
+
+
+            
+        //     return [
+        //         [2, 4, 2],
+        //         [2, 4, 2],
+        //         [2, 4, 2],
+        //     ];
+        // }
+
+        // function matrix_minus(matrix1, matrix2) {}
+        // function matrix_multiple(matrix1, matrix2) {}
     </script>
 </body>
 
