@@ -26,7 +26,8 @@
 	<form onsubmit="question1(); return false" id="city_form">
 		<input type="text" id="question01" placeholder="City...">
 		<button type="submit">Check</button>
-		<br><br><div id="city_greeting"></div>
+		<br><br>
+		<div id="city_greeting"></div>
 	</form><br>
 
 	<h2>Question 2</h2>
@@ -39,7 +40,8 @@
 		<label for="gender2">Female</label>
 
 		<button type="submit">Check</button><br>
-		<br><div id="gender_greeting"></div>
+		<br>
+		<div id="gender_greeting"></div>
 
 	</form><br>
 
@@ -63,30 +65,42 @@
 
 	<br><br>
 	<h2>Question 4</h2>
+	<p>enter petrol liters</p>
 	<form onsubmit="question4(); return false">
-		<input type="number" step=".01"   id="petrol">
+		<input type="number" step=".01" id="petrol">
 		<button type="submit">Check</button><br>
 	</form>
 
 
 
-	<!-- <button onclick="question6()">Question 06 tempreature</button><br> -->
 	<!-- <button onclick="question7()">Question 07 Shoping Slip</button><br><br>
 	 -->
-	 <!-- <h2>Question 5</h2> -->
-	 <h2>Question 6</h2>
+	<h2>Question 6</h2>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total
+		Marks&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Obtain
+		Marks</p>
+	<form onsubmit="question6(); return false">
+		<label>Subject 1 </label> <input type="number" value="0" id="t1" min="1">&nbsp;&nbsp;<input type="number"
+			value="0" id="o1" min="0"> <br>
+		<label>Subject 2 </label> <input type="number" value="0" id="t2" min="1">&nbsp;&nbsp;<input type="number"
+			value="0" id="o2" min="0"> <br>
+		<label>Subject 3 </label> <input type="number" value="0" id="t3" min="1">&nbsp;&nbsp;<input type="number"
+			value="0" id="o3" min="0"> <br>
+		<button type="submit">Calculate</button>
+	</form>
+	<div id="total_markss"></div>
+	<div id="obtain_markss"></div>
+	<div id="percentage"></div>
+	<div id="grade"></div>
+	<div id="remarks"></div>
 
-
-	 
-	 <!-- <h2>Question 7</h2>
-	 <h2>Question 8</h2>
-	 <h2>Question 9</h2>
-	 <h2>Question 10</h2>
-	 <h2>Question 11</h2>
-	 <h2>Question 12</h2> -->
-
-
-
+	<h2>Question 7 Guess Game</h2>
+	<input type="number" id="guess_number" min="0" max="10">
+	<button onclick="question7(); return false">check</button>
+	<div id="guess_number_result"></div>
+	<div id="sevenB"></div>
+	<div id="eight"></div>
+	<div id="nine-odd-even"></div>
 
 
 
@@ -96,22 +110,22 @@
 
 	<script>
 		function question1() {
-				let city = document.querySelector("#question01").value
-				if (city == "karachi") {
-					document.querySelector("#city_greeting").innerHTML = "Welcome to the City of lights! Karachi";
-				}else if(city == "lahore"){
-					document.querySelector("#city_greeting").innerHTML = "Welcome to the City of Gardens! Lahore";
-				}else if(city == "islamabad"){
-					document.querySelector("#city_greeting").innerHTML = "Welcome to the City of Islam and Peace! Islamabad";
-				}else if(city == "quetta"){
-					document.querySelector("#city_greeting").innerHTML = "Welcome to the City of Fruits! Quetta";
-				}else if(city == "peshawar"){
-					document.querySelector("#city_greeting").innerHTML = "Welcome to the City of Flowers! Peshawar";
-				}
-				 else {
-					document.querySelector("#city_greeting").innerHTML = `Welcome to ${city}`;
-				}
+			let city = document.querySelector("#question01").value
+			if (city === "karachi") {
+				document.querySelector("#city_greeting").innerHTML = "Welcome to the City of lights! Karachi";
+			} else if (city == "lahore") {
+				document.querySelector("#city_greeting").innerHTML = "Welcome to the City of Gardens! Lahore";
+			} else if (city == "islamabad") {
+				document.querySelector("#city_greeting").innerHTML = "Welcome to the City of Islam and Peace! Islamabad";
+			} else if (city == "quetta") {
+				document.querySelector("#city_greeting").innerHTML = "Welcome to the City of Fruits! Quetta";
+			} else if (city == "peshawar") {
+				document.querySelector("#city_greeting").innerHTML = "Welcome to the City of Flowers! Peshawar";
 			}
+			else {
+				document.querySelector("#city_greeting").innerHTML = `Welcome to ${city}`;
+			}
+		}
 
 		function question2() {
 			document.getElementById("q2").addEventListener("submit", (e) => {
@@ -158,78 +172,114 @@
 			}
 		}
 
-// question5  
-// answere 5a. is true
-// let a = 4;
-// if(++a === 5){
-// 	console.log("true");
-// }else{
-// 	console.log("false");
-// }
+		// question5  
+		// answere 5a. is true
+		// let a = 4;
+		// if(++a === 5){
+		// 	console.log("true");
+		// }else{
+		// 	console.log("false");
+		// }
 
-// answere 5b. is false
-// let b = 82;
-// if (b++ === 83){
-// 	console.log("true");
-// }else {false}
+		// answere 5b. is false
+		// let b = 82;
+		// if (b++ === 83){
+		// 	console.log("true");
+		// }else {false}
 
-// answere 5c. is false
-// var c = 12;
-// if (c++ === 13){
-// alert("condition 1 is true");   //false
-// }
-// if (c === 13){
-// alert("condition 2 is true");   //true
-// }
-// if (++c < 14){
-// alert("condition 3 is true");   //false
-// }
-// if(c === 14){
-// alert("condition 4 is true");   //true
-// }
+		// answere 5c. is false
+		// var c = 12;
+		// if (c++ === 13){
+		// alert("condition 1 is true");   //false
+		// }
+		// if (c === 13){
+		// alert("condition 2 is true");   //true
+		// }
+		// if (++c < 14){
+		// alert("condition 3 is true");   //false
+		// }
+		// if(c === 14){
+		// alert("condition 4 is true");   //true
+		// }
 
 
-// answere 5d. is true
-// var materialCost = 20000;
-// var laborCost = 2000;
-// var totalCost = materialCost + laborCost;
-// if (totalCost === laborCost + materialCost){
-// alert("The cost equals");}
+		// answere 5d. is true
+		// var materialCost = 20000;
+		// var laborCost = 2000;
+		// var totalCost = materialCost + laborCost;
+		// if (totalCost === laborCost + materialCost){
+		// alert("The cost equals");}
 
-// answere 5e. 
-// if (true){
-// alert("True");    YE CHALA
-// }
-// if (false){
-// alert("False");  YE NHI CHALA
-// }
+		// answere 5e. 
+		// if (true){
+		// alert("True");    YE CHALA
+		// }
+		// if (false){
+		// alert("False");  YE NHI CHALA
+		// }
 
-// answere 5e. is true        it is alphabetical decided like caa is greater then caz
-// if("car" < "cat"){
-// alert("car is smaller than cat");
-// }
+		// answere 5e. is true        it is alphabetical decided like caa is greater then caz
+		// if("car" < "cat"){
+		// alert("car is smaller than cat");
+		// }
 
-//question 6
+		//question 6
 		function question6() {
-			let tempreature = prompt("Enter the tempreature");
-			if (tempreature < 0) {
-				alert("minus ma kon tempreature daalwata hy");
-			}
-			if (tempreature <= 0) {
-				alert("It's freezing outside!");
-			}
-			else if (tempreature >= 100) {
-				alert("It's hot outside!");
-			}
+
+			let t01 = Number(document.querySelector("#t1").value);
+			let t02 = Number(document.querySelector("#t3").value);
+			let t03 = Number(document.querySelector("#t3").value);
+			let o01 = Number(document.querySelector("#o1").value);
+			let o02 = Number(document.querySelector("#o2").value);
+			let o03 = Number(document.querySelector("#o3").value);
+			let total_marks = t01 + t02 + t03;
+			let obtain_marks = o01 + o02 + o03;
+			if (total_marks < obtain_marks) { alert("obtain marks can't be greater than total marks") }
 			else {
-				alert("It's just perfect!");
+				let oPercentage = (obtain_marks / total_marks) * 100;
+				document.querySelector("#percentage").innerHTML = `Your percentage is ${oPercentage}%`;
+
+				if (oPercentage >= 80) {
+					document.querySelector("#grade").innerHTML = `Your grade is A-One`;
+					document.querySelector("#remarks").innerHTML = `Excellent`;
+				} else if (oPercentage >= 70) {
+					document.querySelector("#grade").innerHTML = `Your grade is A`;
+					document.querySelector("#remarks").innerHTML = `Good`;
+				} else if (oPercentage >= 60) {
+					document.querySelector("#grade").innerHTML = `Your grade is B`;
+					document.querySelector("#remarks").innerHTML = `You need to improve`;
+				} else {
+					document.querySelector("#grade").innerHTML = `Your grade is F`;
+					document.querySelector("#remarks").innerHTML = `Sorry`;
+				}
 			}
 		}
 
+		let question7 = () => {
+			const random_number = Math.floor(Math.random() * 10);
+			let guess_number0 = Number(document.querySelector("#guess_number").value);
+			console.log(random_number);
+			if (random_number === guess_number0) {
+				document.querySelector("#guess_number_result").innerText = `Bingo! You guessed the correct number`;
+			} else {
+				document.querySelector("#guess_number_result").innerText = `Sorry! You guessed the wrong number`;
+			}
+			// if(guess_number0){}
+			if (guess_number0 % 3 === 0) {
+				document.querySelector("#eight").innerText = `${guess_number0} is divisible by 3`;
+			} else {
+				document.querySelector("#eight").innerText = `${guess_number0} is not divisible by 3`;
+			}
+			if (guess_number0 % 2 == 0) {
+				document.querySelector("#nine-odd-even").innerText = `${guess_number0} is Even number`;
+			} else {
+				document.querySelector("#nine-odd-even").innerText = `${guess_number0} is Odd number`;
+			}
 
 
 
 
+		}
 
 
 
@@ -253,3 +303,16 @@
 </body>
 
 </html>
+<!-- let tempreature = prompt("Enter the tempreature");
+			if (tempreature < 0) {
+				alert("minus ma kon tempreature daalwata hy");
+			}
+			if (tempreature <= 0) {
+				alert("It's freezing outside!");
+			}
+			else if (tempreature >= 100) {
+				alert("It's hot outside!");
+			}
+			else {
+				alert("It's just perfect!");
+			} -->
