@@ -20,48 +20,5 @@ how to create desktop app with JavaScript
 
  */
 
-//es5 for HOISTING (named function)
-function add(a, b) {
-    return a + b;
-}
-
-
-let add = function (a, b) {
-    return a + b;
-}
-
-//es6 arrow function
-let add2(a, b) => {
-    return a + b;
-}
-let cube = (num) => {
-    return num * num * num;
-}
-// ak parameter ma () ki zaroorat nhi
-let cube2 = num => num * num * num;
-
-let my_function = (a, b, c) => {
-    let num = 5;
-    // function ky ander bane hue variable bahar nhi miltay isse memeory eficency aati hy
-    return num +a +b +c;
-
-    console.log("ye nhi run hoga kyu ky return ky baad ka function khatam ho jata hy");
-}
-
-
-let isEven = (num) => {
-    if(num % 2 ==0){
-        alert("even");
-    }
-    else{
-        alert("odd");
-    }
-}
-//e or event 
-let my_function2 = () => {
-    let num = 5;
-    let result = isEven(num);
-    alert(result);
-}
 
 
