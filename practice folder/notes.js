@@ -14,6 +14,9 @@ make a game and time tracker app with JavaScript
 how to convert a website from dark mode to light mode with user's perfrence
 how to create desktop app with JavaScript
 
+validation lazmi hyn
+fornt end ma nhi backend ma bhi zaroori hy validation kyu ky koi code crash na karde apka 
+parseInt
 
 
 
