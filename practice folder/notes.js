@@ -18,7 +18,7 @@ validation lazmi hyn
 fornt end ma nhi backend ma bhi zaroori hy validation kyu ky koi code crash na karde apka 
 parseInt
 
-
+"strings double quotes ma" aur function jese display = 'none' single ma
 
 
  */
