@@ -12,6 +12,7 @@
 // switch       for switch (key) {case value:   break;      default:		break;}
 // ra           for document.removeAttribute('attr');
 // ih           for document.innerHTML = 'elem';
+// e            for e.preventDefault();
 
 
 

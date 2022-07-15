@@ -19,7 +19,7 @@ fornt end ma nhi backend ma bhi zaroori hy validation kyu ky koi code crash na k
 parseInt
 
 "strings double quotes ma" aur function jese display = 'none' single ma
-
+native or premitive data types are boolean, string and number
 
  */
 
