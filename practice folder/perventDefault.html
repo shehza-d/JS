@@ -19,13 +19,14 @@ This is for consoling the Properties of Event
     </script> -->
 
 
-    <form>
-        <input type="text">
+    <form onsubmit="function(event); return false">
+        <input type="text" id="input">
     </form>
     <script>
         let myFunction = (e)  => {
         e.preventDefault();
-        // let aur baki kam
+       let input = document.querySelector('#input');
+       console.log(input);
         }   
     </script>
 </body>

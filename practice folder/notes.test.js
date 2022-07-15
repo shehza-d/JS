@@ -23,6 +23,20 @@ parseInt
 "strings double quotes ma" aur function jese display = 'none' single ma
 native or premitive data types are boolean, string and number
 
+
+15/jul 2022
+customer acquisition price
+#6601EB    47 border radius   costumer accouzation price
+
+
+
+
+
+
+
+
+
+
  */
 
 

@@ -37,3 +37,8 @@ document.write(`${one} ${two}`);
 document.write(`${1+2+3}  <br/>`);
 document.write(`1+2+3`);
 
+document.querySelector('selector');
+document.addEventListener('shehzaddiqbal', function (e) {
+    shehzad
+});
+
