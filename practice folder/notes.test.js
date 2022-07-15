@@ -16,6 +16,8 @@ how to create desktop app with JavaScript
 
 validation lazmi hyn
 fornt end ma nhi backend ma bhi zaroori hy validation kyu ky koi code crash na karde apka 
+test karne wale pura wiki ka page input ma paste mar ky code test karty hyn aur code crash ho jata hy
+
 parseInt
 
 "strings double quotes ma" aur function jese display = 'none' single ma
