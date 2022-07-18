@@ -20,6 +20,9 @@ console.log("false")
 // if(1=1)     //error
 // if(1==="1") //false
 
+{/* Conditional (Ternary) Operator */}
+
+variablename = (condition) ? value1:value2 
 	</script>
 </body>
 </html>

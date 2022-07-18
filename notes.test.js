@@ -1,3 +1,7 @@
+test ('Pull request', () => {
+	const validPR = validateUserName(mockPR);
+	expect( validPR).toBe(true);
+});
 /* 27-jun-2022
 HOISTING
  anonomus function 
@@ -17,6 +21,8 @@ how to create desktop app with JavaScript
 validation lazmi hyn
 fornt end ma nhi backend ma bhi zaroori hy validation kyu ky koi code crash na karde apka 
 test karne wale pura wiki ka page input ma paste mar ky code test karty hyn aur code crash ho jata hy
+ Test driven development is Highly recommanded and another skill of and experiance developer is to understand what test are valuable and nessary (practice)
+
 
 parseInt
 
@@ -27,6 +33,22 @@ native or premitive data types are boolean, string and number
 15/jul 2022
 customer acquisition price
 #6601EB    47 border radius   costumer accouzation price
+
+
+
+[
+	writing your test before your code is extremly useful
+start by writng failing test
+]
+
+
+
+
+
+
+
+
+
 
 
 
