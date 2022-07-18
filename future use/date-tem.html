@@ -5,12 +5,24 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+	<!-- iso date
+	date document is mozilla
+	sir [epoch time] ma time save karty hyn server ma (ye format har programming language ma hota hy )
+	
+	Moment.JS is used for time related tasks
+
+	
+	-->
 </head>
 <body>
 	<script>
 let d = new Date();
-document.write(d)
-// document.write(d.)
+ document.write(d)
+
+ console.log(d.toDateString());
+ console.log(d.toString());
+
+/* document.write(d.)
 
 document.write(d.getDate(), d.getMonth()+1, d.getFullYear());
 document.write(d.getDate());
@@ -19,9 +31,11 @@ document.write(d.getFullYear());
 
 
 document.write(d.getDay());
-document.write(d.getTime());
-// document.write(d.getVarDate());
-document.write(d.getTimezoneOffset());
+document.write(d.getHours());
+
+document.write(d.getVarDate());
+document.write(d.getTimezoneOffset());  */
+console.log(d.getTime());
 
 	</script>
 </body>
