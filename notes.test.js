@@ -42,8 +42,9 @@ start by writng failing test
 ]
 
 
-
-
+18-jul-2022
+parseInt = point hatane ko  (AGE, PHONE number aur )
+kisi chez per toString() lagao tw wo string ban jae ga
 
 
 
