@@ -21,14 +21,14 @@
 			}
 		}
 
-		/* .dark-mode {
+		.dark-mode {
 			background-color: black;
 			color: white;
 		}
 		.light-mode {
 			background-color: white;
 			color: black;
-		} */
+		}
 	</style>
 </head>
 
@@ -55,18 +55,35 @@
 	<img src="./github-brands.svg" alt="" width="60px">
 
 	<script>
-	// function darkMode() {
-	// 	var element = document.body;
-	// 	var content = document.getElementById("DarkModetext");
-	// 	element.className = "dark-mode";
-	// 	content.innerText = "Dark Mode is ON";
-	// }
-	// function lightMode() {
-	// 	var element = document.body;
-	// 	var content = document.getElementById("DarkModetext");
-	// 	element.className = "light-mode";
-	// 	content.innerText = "Dark Mode is OFF";
-	// }
+/*Detection theme with JS*/
+window.matchMedia("(prefers-color-scheme: dark)").matches //ye return kaare ga ture ya false base on system theme
+
+
+
+// copilot code
+// .addEventListener("change", e => {
+//   if (e.matches) {
+// 	document.body.classList.add("dark-mode");
+// 	console.log("Dark Mode is ON");
+//   } else {
+// 	document.body.classList.remove("dark-mode");
+// 	console.log("Dark Mode is OFF");
+//   }
+// }
+
+
+	function darkMode() {
+		var element = document.body;
+		var content = document.getElementById("DarkModetext");
+		element.className = "dark-mode";
+		content.innerText = "Dark Mode is ON";
+	}
+	function lightMode() {
+		var element = document.body;
+		var content = document.getElementById("DarkModetext");
+		element.className = "light-mode";
+		content.innerText = "Dark Mode is OFF";
+	}
 	</script>
 </body>
 
