@@ -56,6 +56,8 @@ Object hamesha const ma banao
         const shehzad_object = {
             name: "shehzad",
             age: 21,
+            boolean:true,
+            pas: "123",
 
 
         }

@@ -73,29 +73,6 @@
 
     </script>
 </body>
-<!-- 
-NOTES : 
 
-24-jun-2022
-developer.mozilla.org is best website for programming 
-programiz.com/javascript/library/array   (must watch)
-array and object and function is important for Professional JS
-font-end ma function 10 lines se zada na ho
-.join pre-build function
-how to avoid case sencitivity in search in JS
-methods : 
-(evenNumber)
-Slice
-isOdd
-filters
-hoisting (ye pharne hy)
-function self sufficient hona chiye
-global variables are not used in function
-
-== is discouraged 
-=== is 
-pure function
-CPU CYCLES IS IMPROTANT
- -->
 
 </html>
