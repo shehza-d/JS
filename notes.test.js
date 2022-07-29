@@ -73,7 +73,8 @@ parseInt = point hatane ko  (AGE, PHONE number aur )
 kisi chez per toString() lagao tw wo string ban jae ga
 controlling decimal points .toFixed()   
 
-
+29-jul-2022
+debugger; keyword for stoping code and debugging code
 
 
 
