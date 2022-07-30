@@ -15,10 +15,10 @@
 //Guess Game
 
 do {
-    let randomNumber = Math.round(Math.random()*10)+1;
-    console.log(randomNumber)    
+    let randomNumber = Math.round(Math.random() * 10) + 1;
+    console.log(randomNumber)
     let userInput = Number(prompt("Enter a random number"));
-    
+
     if (randomNumber == userInput) {
         alert("You gussed right number!");
     } else {
