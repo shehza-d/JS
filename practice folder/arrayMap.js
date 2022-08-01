@@ -1,17 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-<h1>array map</h1>
-<script>
-
-
 
 // let ary = ["hello","shehzad","saad","Maarig","rehan",'okasha',"Adil"];
 // //idher item aur index keywords nhi hyn inko apni marzi se koi bhi nam de sagty hyn
@@ -38,7 +24,3 @@ let copy = ary2.map ((item, index) => {
 // function myFunction(num) {
 //   return num * 10;
 // }
-
-    </script>
-</body>
-</html>

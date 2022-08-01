@@ -1,16 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+// <!DOCTYPE html>
+// <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+// <head>
+//     <meta charset="UTF-8">
+//     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>Document</title>
+// </head>
 
-<body>
-    <h1>name reverse</h1>
-    <script>
+// <body>
+//     <h1>name reverse</h1>
+//     <script>
         let input_string = prompt("enter your name");
         let new_string = '';
         console.log(input_string.length);
@@ -21,8 +21,8 @@
         }
 
         console.log(new_string); 
-    </script>
-    <!-- function reverseString(str) {
+    // </script>
+    function reverseString(str) {
         // Step 1. Create an empty string that will host the new created string
         var newString = "";
      
@@ -47,7 +47,5 @@
         return newString; // "olleh"
     }
      
-    reverseString('hello'); -->
-</body>
-
-</html>
+    reverseString('hello');
+    
