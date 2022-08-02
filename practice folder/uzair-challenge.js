@@ -23,7 +23,7 @@ for (let i = 1; i < 11; i++) {
 	j = -(i - 11);
 	console.log(i, j)
 }
-
+//saaim 2
 for(i=1;i<=10;i++){
 	console.log(i,11-i);	
 }
