@@ -16,10 +16,17 @@
 //         }   
 
 
-//1-aug-2022
+//3-aug-2022
+document.addEventListener("mousedown", (event)=>{
+    document.body.style.backgroundColor = "red";
+});
+document.addEventListener("mouseup", (event)=>{
+    document.body.style.backgroundColor = "white";
+});
 
-
-
+document.addEventListener('mousemove', (event)=>{
+    console.log(event);
+})
 
 /*
 chapter 45 Event
@@ -29,9 +36,9 @@ har event ka koi quencequence hota hy
 pubsub subscribe
 try event driven in form valation after entring value(onblur)
 
-
-
-
+download button 
+ye dot na choray
+4 pen
 
 
 
