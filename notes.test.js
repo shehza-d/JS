@@ -76,7 +76,10 @@ controlling decimal points .toFixed()
 29-jul-2022
 debugger; keyword for stoping code and debugging code
 
-
+22-aug-2022
+DOM
+Circular Object (imp) 
+react ka apna DOM hy
 
 
 
