@@ -12,14 +12,15 @@
 // mediator
 // state
 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
+// regx logic (kya har language ma regx same hoty hyn)
+// itrator function nhi samaj aay
+// symbol,Map and sets ka use?
+//
+//
+//
+//
+//
+//
+//
+//
+//
