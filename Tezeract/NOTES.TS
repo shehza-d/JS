@@ -17,3 +17,4 @@
 //js ki classes aur regx syntax same hy like other languages??
 // react ma .map kyu use karty hyn forEach kyu nhi
 // OOP code ki example chiye mujhe 
+//d/b object and instance
