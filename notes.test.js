@@ -90,6 +90,20 @@ react ka apna DOM hy
 
 make a certificate generator project
 
+09-Jan-2023
+coding best practice 
+code ma repiation na ho 
+code resuable ho
+separation of concerns (ak hi file ma sab kam na ho- code splited ho)
+
+
+
+
+
+
+
+
+
  */
 
 
