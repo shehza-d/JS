@@ -97,8 +97,24 @@ code resuable ho
 separation of concerns (ak hi file ma sab kam na ho- code splited ho)
 
 
+27-Jan-2023
+this makes the ojbect really a const 
+const person = Object.freeze({
+name:"shehzad",
+age:19
+hobbies: Oject.freeze(["Teaching","Eating","Programming"])//array can also be freezed
+})
+(nested objects are not immutable)
 
+built-in array of unique values
+const uniqueNumbers=[1,2,2,3,4,3,3]
+const set = new Set(uniqueNumbers)
+set.has(1)//true
+set.delete(1)
+console.log(set)
 
+//this only prints to log when the given condition is matched
+console.assert(x===1, "x is not equal to 1")
 
 
 
