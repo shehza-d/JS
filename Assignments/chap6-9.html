@@ -1,44 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" type="image/x-icon" href="../Shehzad-logo.png" />
-	<title>Chp 6-9</title>
-</head>
-<body>
-	<script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="../Shehzad-logo.png" />
+    <title>Chp 6-9</title>
+  </head>
+  <body>
+    <script>
+      let user_name = prompt("Enter your Name: ");
+      document.write("Hello, Assalam o Alaikum Mr." + user_name);
 
-		let user_name = prompt("Enter your Name: ");
-		document.write("Hello, Assalam o Alaikum Mr."+user_name)
+      let a = prompt("Enter any number", "10");
 
+      document.write("<br><br>Result:</br>The Value of a is : " + a);
+      document.write(
+        "<br>......................................................."
+      );
 
+      document.write("<br><br><br>The value of per-increment ++a is : " + ++a);
+      document.write("<br>Now the value is : " + a);
 
-		let a = prompt("Enter any number","10");
-		
-		document.write("<br><br>Result:</br>The Value of a is : " + a);
-		document.write("<br>.......................................................")
+      document.write("<br><br><br>The value of post-increment a++ is : " + a++);
+      document.write("<br>Now the value is : " + a);
 
-		document.write("<br><br><br>The value of per-increment ++a is : "+ ++a);
-		document.write("<br>Now the value is : "+ a);
+      document.write("<br><br><br>The value of per-decrement --a is : " + --a);
+      document.write("<br>Now the value is : " + a);
 
-		document.write("<br><br><br>The value of post-increment a++ is : "+ a++);
-		document.write("<br>Now the value is : "+ a);
+      document.write("<br><br><br>The value of post-decrement a-- is : " + a--);
+      document.write("<br>Now the value is : " + a);
 
-		document.write("<br><br><br>The value of per-decrement --a is : "+ --a);
-		document.write("<br>Now the value is : "+ a);
+      let b = 2,
+        c = 1;
+      let result = --b - --c + ++c + c--;
+      document.write("<br><br>Result : " + result);
+    </script>
 
-		document.write("<br><br><br>The value of post-decrement a-- is : "+ a--);
-		document.write("<br>Now the value is : "+ a);
-
-
-		let  b = 2, c=1;
-		let result = --b - --c + ++c + c--;
-		document.write("<br><br>Result : " +result);		
-	</script>
-
-<a href="./chp6table.html">chapter 6 question 6 Table</a>	
-	
-</body>
+    <a href="./chp6table.html">chapter 6 question 6 Table</a>
+  </body>
 </html>

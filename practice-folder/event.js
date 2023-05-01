@@ -13,20 +13,19 @@
 //         e.preventDefault();
 //        let input = document.querySelector('#input');
 //        console.log(input);
-//         }   
-
+//         }
 
 //3-aug-2022
-document.addEventListener("mousedown", (event)=>{
-    document.body.style.backgroundColor = "red";
+document.addEventListener("mousedown", (event) => {
+  document.body.style.backgroundColor = "red";
 });
-document.addEventListener("mouseup", (event)=>{
-    document.body.style.backgroundColor = "white";
+document.addEventListener("mouseup", (event) => {
+  document.body.style.backgroundColor = "white";
 });
 
-document.addEventListener('mousemove', (event)=>{
-    console.log(event);
-})
+document.addEventListener("mousemove", (event) => {
+  console.log(event);
+});
 
 /*
 chapter 45 Event

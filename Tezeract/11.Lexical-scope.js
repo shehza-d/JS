@@ -9,7 +9,6 @@ const person1 = {
 
 // console.log(person.fullName.call(person1));
 
-
 //not working
 // const person = {
 //   fullName: function () {
@@ -19,6 +18,5 @@ const person1 = {
 // const person1 = {
 //   firstName: "Shehzad",
 // };
-
 
 // console.log(person.fullName(person1));

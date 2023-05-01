@@ -10,15 +10,11 @@ for (var i = 0; i < 100000000; i++);
 var end = window.performance.now();
 console.log(`Execution time: ${end - start} ms`);
 
-
-
 //this is running in NODE also
-console.time('Execution Time');
- 
+console.time("Execution Time");
+
 // task starts
-for (var i = 0; i < 10000000;i++);
+for (var i = 0; i < 10000000; i++);
 // task ends
- 
-console.timeEnd('Execution Time');
 
-
+console.timeEnd("Execution Time");

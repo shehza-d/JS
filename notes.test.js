@@ -1,6 +1,6 @@
-test ('Pull request', () => {
-	const validPR = validateUserName(mockPR);
-	expect( validPR).toBe(true);
+test("Pull request", () => {
+  const validPR = validateUserName(mockPR);
+  expect(validPR).toBe(true);
 });
 /* 
 
@@ -121,5 +121,3 @@ console.assert(x===1, "x is not equal to 1")
 
 
  */
-
-

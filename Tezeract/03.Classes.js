@@ -65,9 +65,9 @@ class Car extends Vehicle {
     super(vehicleName);
     this.vehicleType = vehicleType;
   }
-  static getWashFee(){
+  static getWashFee() {
     return 500;
   }
 }
-const carObj = new Car("Honda","Bike")
-console.log(carObj.greeting());//greeting method is not in Car class but is being called from parent class with the help of super()
+const carObj = new Car("Honda", "Bike");
+console.log(carObj.greeting()); //greeting method is not in Car class but is being called from parent class with the help of super()

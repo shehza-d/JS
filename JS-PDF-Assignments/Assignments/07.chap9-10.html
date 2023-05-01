@@ -1,119 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico" />
+    <title>chap 9 to 10</title>
+    <style>
+      #traffic_div {
+        color: rgb(23, 23, 23);
+        width: 80%;
+        height: 50px;
+        text-align: center;
+        padding: 7px;
+        padding-top: 10px;
+      }
+    </style>
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico" />
-	<title>chap 9 to 10</title>
-	<style>
-		#traffic_div {
-			color: rgb(23, 23, 23);
-			width: 80%;
-			height: 50px;
-			text-align: center;
-			padding: 7px;
-			padding-top: 10px;
-		}
-	</style>
-</head>
+  <body>
+    <h2>Assignment chapter 9 to 10</h2>
 
-<body>
-	<h2>Assignment chapter 9 to 10</h2>
+    <h2>Question 1</h2>
+    <form onsubmit="question1(); return false" id="city_form">
+      <input type="text" id="question01" placeholder="City..." />
+      <button type="submit">Check</button>
+      <br /><br />
+      <div id="city_greeting"></div>
+    </form>
+    <br />
 
-	<h2>Question 1</h2>
-	<form onsubmit="question1(); return false" id="city_form">
-		<input type="text" id="question01" placeholder="City...">
-		<button type="submit">Check</button>
-		<br><br>
-		<div id="city_greeting"></div>
-	</form><br>
+    <h2>Question 2</h2>
+    <form onsubmit="question2(); return false" id="q2">
+      <input type="radio" name="gender" value="male" />
+      <label for="gender1">Male</label>
 
-	<h2>Question 2</h2>
-	<form onsubmit="question2(); return false" id="q2">
+      <input type="radio" name="gender" value="female" />
+      <label for="gender2">Female</label>
 
-		<input type="radio" name="gender" value="male">
-		<label for="gender1">Male</label>
+      <button type="submit">Check</button><br />
+      <br />
+      <div id="gender_greeting"></div>
+    </form>
+    <br />
 
-		<input type="radio" name="gender" value="female">
-		<label for="gender2">Female</label>
+    <h2>Question 3</h2>
+    <form onsubmit="question3(); return false">
+      <label for="traffic_signs">Chose your Value: </label>
+      <select name="" id="traffic_signs">
+        <option value="red">Red</option>
+        <option value="yellow">Yellow</option>
+        <option value="green">Green</option>
+      </select>
 
-		<button type="submit">Check</button><br>
-		<br>
-		<div id="gender_greeting"></div>
+      <button type="submit">Check</button>
+    </form>
+    <div id="traffic_div"></div>
 
-	</form><br>
+    <br /><br />
+    <h2>Question 4</h2>
+    <p>enter petrol liters</p>
+    <form onsubmit="question4(); return false">
+      <input type="number" step=".01" id="petrol" />
+      <button type="submit">Check</button><br />
+    </form>
 
-
-	<h2>Question 3</h2>
-	<form onsubmit="question3(); return false">
-		<label for="traffic_signs">Chose your Value: </label>
-		<select name="" id="traffic_signs">
-			<option value="red">Red</option>
-			<option value="yellow">Yellow</option>
-			<option value="green">Green</option>
-		</select>
-
-		<button type="submit">Check</button>
-	</form>
-	<div id="traffic_div"></div>
-
-
-
-
-
-	<br><br>
-	<h2>Question 4</h2>
-	<p>enter petrol liters</p>
-	<form onsubmit="question4(); return false">
-		<input type="number" step=".01" id="petrol">
-		<button type="submit">Check</button><br>
-	</form>
-
-
-
-	<!-- <button onclick="question7()">Question 07 Shoping Slip</button><br><br>
+    <!-- <button onclick="question7()">Question 07 Shoping Slip</button><br><br>
 	 -->
-	<h2>Question 6</h2>
-	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total
-		Marks&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Obtain
-		Marks</p>
-	<form onsubmit="question6(); return false">
-		<label>Subject 1 </label>
-		<input type="number" value="100" id="t1" min="1">&nbsp;&nbsp;
-		<input type="number" value="0" id="o1" min="0"> <br>
-		<label>Subject 2 </label>
-		<input type="number" value="100" id="t2" min="1">&nbsp;&nbsp;
-		<input type="number" value="0" id="o2" min="0"> <br>
-		<label>Subject 3 </label>
-		<input type="number" value="100" id="t3" min="1">&nbsp;&nbsp;
-		<input type="number" value="0" id="o3" min="0"> <br>
-		<button type="submit">Calculate</button>
-	</form>
-	<div id="total_markss"></div>
-	<div id="obtain_markss"></div>
-	<div id="percentage"></div>
-	<div id="grade"></div>
-	<div id="remarks"></div>
+    <h2>Question 6</h2>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total
+      Marks&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Obtain
+      Marks
+    </p>
+    <form onsubmit="question6(); return false">
+      <label>Subject 1 </label>
+      <input type="number" value="100" id="t1" min="1" />&nbsp;&nbsp;
+      <input type="number" value="0" id="o1" min="0" /> <br />
+      <label>Subject 2 </label>
+      <input type="number" value="100" id="t2" min="1" />&nbsp;&nbsp;
+      <input type="number" value="0" id="o2" min="0" /> <br />
+      <label>Subject 3 </label>
+      <input type="number" value="100" id="t3" min="1" />&nbsp;&nbsp;
+      <input type="number" value="0" id="o3" min="0" /> <br />
+      <button type="submit">Calculate</button>
+    </form>
+    <div id="total_markss"></div>
+    <div id="obtain_markss"></div>
+    <div id="percentage"></div>
+    <div id="grade"></div>
+    <div id="remarks"></div>
 
-	<h2>Question 7 Guess Game</h2>
-	<input type="number" id="guess_number" min="0" max="10">
-	<button onclick="question7(); return false">check</button>
-	<div id="guess_number_result"></div>
-	<div id="sevenB"></div>
-	<div id="eight"></div>
-	<div id="nine-odd-even"></div><br><br>
+    <h2>Question 7 Guess Game</h2>
+    <input type="number" id="guess_number" min="0" max="10" />
+    <button onclick="question7(); return false">check</button>
+    <div id="guess_number_result"></div>
+    <div id="sevenB"></div>
+    <div id="eight"></div>
+    <div id="nine-odd-even"></div>
+    <br /><br />
 
-	<h2>Question 8</h2>
-	<input type="number" id="temp">
-	<button onclick="question10()">Check</button>
+    <h2>Question 8</h2>
+    <input type="number" id="temp" />
+    <button onclick="question10()">Check</button>
 
-
-	<script src="./07.chap9-10.js"></script>
-
-</body>
-
+    <script src="./07.chap9-10.js"></script>
+  </body>
 </html>
 <!-- let tempreature = prompt("Enter the tempreature");
 // 			if (tempreature < 0) {
