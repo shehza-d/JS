@@ -116,6 +116,10 @@ console.log(set)
 //this only prints to log when the given condition is matched
 console.assert(x===1, "x is not equal to 1")
 
+16-Jun-2023
+browser ma phale AMD js use hoti thi 
+aur server per phale commonJs use hoti thi 
+ab updates ky baad dono jaga Module Js use hoti hy
 
 
 
