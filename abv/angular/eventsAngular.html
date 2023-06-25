@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+  <head>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/script.js"></script>
+  </head>
+  <body>
+    <div ng-controller="myController">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Likes</th>
+            <th>Dislikes</th>
+            <th>Like/Dislike</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="technology in technologies">
+            <td>{{ technology.name}}</td>
+            <td>{{ technology.likes}}</td>
+            <td>{{ technology.dislikes}}</td>
+            <td>
+              <input
+                type="button"
+                value="like"
+                ng-click="incrementLikes(technology)"
+              />
+              <input
+                type="button"
+                value="Dislike"
+                ng-click="incrementDislikes(technology)"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

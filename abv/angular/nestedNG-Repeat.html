@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+  <head>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/script.js"></script>
+  </head>
+  <body>
+    <div ng-controller="myController">
+      <ul ng-repeat="country in countries">
+        <li>
+          {{country.name}}
+          <ul>
+            <li ng-repeat="city in country.cities">{{city.name}}</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
