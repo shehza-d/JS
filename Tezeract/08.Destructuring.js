@@ -18,10 +18,11 @@ console.log(person1, person2, person3);
 
 // Parse array returned from function
 function getPeople() {
-  return ["John", "Beth", "Mike"];
+  return ["John", "Shehzad", "Mike"];
 }
 
 let person1, person2, person3;
+// reassigning
 [person1, person2, person3] = getPeople();
 
 console.log(person1, person2, person3);
@@ -49,3 +50,17 @@ const { name, age, city, sayHello } = person;
 console.log(name, age, city);
 
 sayHello();
+
+// Nested object destructuring
+
+const { data: { message } } = {
+  name: "John Doe",
+  age: 32,
+  data: {
+    message: "testingggg",
+  },
+};
+
+const { data: { message } } = res;
+
+console.log("res", message);
